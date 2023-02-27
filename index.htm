@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,35 +8,65 @@
     <title>Countries</title>
 
     <style>
-        .header{
+        .header {
             text-align: center;
             font-size: 4em;
         }
-        #all-country{
+
+        #all-country {
             display: grid;
-            grid-template-columns: repeat(4 , 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 10px;
         }
-        .country{
+
+        .country {
             border: 1px solid rgba(244, 165, 96, 0.233);
             padding: 10px;
             border-radius: 4px;
         }
-        .country img{
+
+        .country img {
             width: 100%;
         }
-        @media  (max-width: 576px) {
-            #all-country{      
-            grid-template-columns: repeat(1 , 1fr);   
+
+        #show-details{
+            
+            padding: 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            width: 70%;
+            margin: 0 auto;
+        }
+        .details{
+            border: 1px solid rgba(237, 181, 140, 0.447);
+            width: 300px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .details img{
+            width: 100%;
+        }
+        @media (max-width: 576px) {
+            #all-country {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            #show-details{
+            grid-template-columns: repeat(1, 1fr);
         }
         }
     </style>
 </head>
-<body>
-   <h1 class="header">All Countries</h1>
-    <div id="all-country">
 
-    </div>
+<body>
+    <h1 class="header">All Countries</h1>
+    <section id="show-details">
+        
+    </section>
+    <section id="all-country">
+
+    </section>
     <script src="js/apps.js"></script>
 </body>
+
 </html>

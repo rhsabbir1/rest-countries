@@ -27,6 +27,17 @@ const loadCountriesDetails =(code) =>{
 }
 
 const disLoadplayData =(country)=>{
-    
+    console.log(country)
+    const showDetailsSection = document.getElementById('show-details');
+    const shodDatilDiv = document.createElement('div');
+    shodDatilDiv.classList.add('details')
+    shodDatilDiv.innerHTML =`
+         <img src="${country.flags.png}" alt="">
+        <h2>Name : ${country.name.common}</h2>
+        <p>Language : ${country.languages.spa}</p>
+        <p>Continents : ${country.continents[0]}</p>
+        <p>Population : ${country.population}</p>
+    `
+    showDetailsSection.appendChild(shodDatilDiv)
 }
 loadCountries()
